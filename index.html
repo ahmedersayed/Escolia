@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolia - Coming Soon</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a2e; /* Dark Blue Background */
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Container styling */
+        .container {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            max-width: 150px; /* Adjust size as needed */
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* The "Digger" Animation Scene */
+        .scene {
+            font-size: 80px;
+            margin: 20px 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        .worker {
+            display: inline-block;
+            animation: dig 1s infinite alternate;
+            transform-origin: bottom center;
+        }
+
+        .dust {
+            position: absolute;
+            bottom: 0;
+            right: -10px;
+            font-size: 40px;
+            opacity: 0;
+            animation: dust-cloud 1s infinite;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            color: #f1c40f; /* Safety Yellow */
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #a5a5b5;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+        }
+
+        /* The Progress Bar */
+        .progress-container {
+            width: 300px;
+            height: 10px;
+            background: #16213e;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #f1c40f, #e67e22);
+            width: 0%;
+            animation: load 3s ease-in-out infinite;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes dig {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-20deg) translateY(5px); }
+        }
+
+        @keyframes dust-cloud {
+            0% { opacity: 0; transform: scale(0.5) translate(0, 0); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: scale(1.5) translate(15px, -15px); }
+        }
+
+        @keyframes load {
+            0% { width: 10%; }
+            50% { width: 70%; }
+            100% { width: 100%; opacity: 0; }
+        }
+
+        /* Background Pattern (Blueprint style) */
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#ffffff 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.05;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-pattern"></div>
+
+    <div class="container">
+        <img src="1.png" alt="Escolia Logo" class="logo">
+
+        <div class="scene">
+            <span class="worker">👷‍♂️</span>
+            <span class="dust">💨</span>
+        </div>
+
+        <h1>Under Construction</h1>
+        
+        <p>
+            Wait for it... We are currently digging up the best school secrets for you.<br>
+            <strong>Something amazing is being built here!</strong>
+        </p>
+
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+</body>
+</html>
